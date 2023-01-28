@@ -14,7 +14,6 @@ if (SavedUserID === null) {
     loginForm.classList.remove(HiddenClassName);
     loginButton.addEventListener("click", loginButtonClick);
     function loginButtonClick(event) {
-        event.preventDefault();
         const UserId = loginInput.value;
         localStorage.setItem("UserId", UserId);
         welcome.innerText = `Welcome ${UserId}`;
