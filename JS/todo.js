@@ -14,13 +14,14 @@ todoForm.addEventListener("submit", todoSubmit);
 
 function paintTodo(newTodo) {
     const li = document.createElement("li");
+    li.id = newTodo.id;
     const span = document.createElement("span");
     const button = document.createElement("button");
     button.innerText = "X";
     button.addEventListener("click", todoErase)
     li.appendChild(span);
     li.appendChild(button);
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     todoList.appendChild(li);
 }
 
@@ -34,11 +35,15 @@ function todoSubmit(event) {
     //로컬스토리지에 들어가는 todo를 cosnt로 선언해서 TODO_KEY를 만들면 preventDefault가 오류남 -> ??
     const newTodo = todoInput.value;
     todoInput.value = "";
-    Todos.push(newTodo);
+    const newTodoOBJ = {
+        text: newTodo,
+        id: Date.now(),
+    }
+    Todos.push(newTodoOBJ);
     //Todos라는 array에다 newTodo라는 todoInput.value를 집어넣음 1
-    saveTodos(newTodo);
+    saveTodos();
     //로컬에 newTodo를 넣기위해 펑션호출
-    paintTodo(newTodo);
+    paintTodo(newTodoOBJ);
 }
 
 const savedTodos = localStorage.getItem("todos");
