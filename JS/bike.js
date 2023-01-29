@@ -1,5 +1,6 @@
 const bikes = [
-    "cbr1000rr.png"
+    "cbr1000rr.png",
+    "iron883.png"
 ]
 
 const chosenBike = bikes[Math.floor(Math.random() * bikes.length)];

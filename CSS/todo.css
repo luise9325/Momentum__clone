@@ -1,0 +1,44 @@
+.todo_box {
+    margin-left: 70%;
+    width: 30%;
+    position: absolute;
+    height: auto;
+    justify-content: flex-start;
+    top: 55%;
+}
+
+.todo_form input {
+    width: 350px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+.todo_list {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo_list li {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    margin: 5px 0px;
+}
+.todo_list li span {
+    margin-left: 10px;
+    width: 90%;
+}
+.todo_list li button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

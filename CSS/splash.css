@@ -1,5 +1,5 @@
 .open_id {
-    background-image: linear-gradient(45deg, red,black);;
+    background-color: black;
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: orange;
+    color: white;
     font-size: 140px;
     animation: hideSplashScreen 0.5s ease-out forwards;
     animation-delay: 1.5s;
@@ -26,7 +26,7 @@
 }
 
 .open_id2 {
-    background-image: linear-gradient(45deg, red, black);;
+    background-image: linear-gradient(45deg, black, red);
     position: absolute;
     width: 100%;
     height: 100vh;

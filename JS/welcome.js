@@ -16,16 +16,20 @@ const open_id = document.querySelector(".open_id");
 const open_id2 = document.querySelector(".open_id2");
 const open_id3 = document.querySelector(".open_id3");
 
+const todoBox = document.querySelector(".todo_box");
+
 if (SavedUserId === null) {
     //로컬스토리지에 사용지 ID가 없을경우
     open_id.classList.add(HiddenClassName);
     open_id2.classList.add(HiddenClassName);
+    todoBox.classList.add(HiddenClassName);
     loginScreen.classList.remove(HiddenClassName);
     loginScreen.classList.add(Flex2ClassName);
     loginButton.addEventListener("click", loginButtonClick);
     function loginButtonClick(event) {
         open_id.classList.remove(HiddenClassName);
         open_id2.classList.remove(HiddenClassName);
+        todoBox.classList.remove(HiddenClassName);
         const UserId = loginInput.value;
         localStorage.setItem("UserId", UserId);
         open_id3.innerText = UserId;

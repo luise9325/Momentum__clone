@@ -4,10 +4,10 @@
 @import "text_animation.css";
 @import "bike.css";
 @import "nonlog.css";
+@import "todo.css";
 
 html{
     background-color: white;
-    overflow: hidden;
 }
 
 .hidden {
