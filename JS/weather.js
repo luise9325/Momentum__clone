@@ -5,6 +5,7 @@ function GeoOk(position) {
     const lon = position.coords.longitude;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
     //api사이트에서 계정 승인확인중~
+    console.log(url);
     fetch(url).then(response => response.json()).then(data => {
         const weatherContainer = document.querySelector(".weather span:first-child");
         const cityContainer = document.querySelector(".weather span:last-child");
