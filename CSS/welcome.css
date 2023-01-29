@@ -36,3 +36,15 @@
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
+
+
+.weather {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
