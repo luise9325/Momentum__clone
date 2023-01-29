@@ -1,27 +1,28 @@
 const loginForm = document.querySelector(".login-form");
+const loginScreen = document.querySelector(".login-screen");
 const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
 
 const HiddenClassName = "hidden";
 
-const SavedUserID = localStorage.getItem("UserId");
+const SavedUserId = localStorage.getItem("UserId");
 
 const welcome = document.querySelector(".welcome");
 const show_off = document.querySelector(".show_off");
 
-if (SavedUserID === null) {
+if (SavedUserId === null) {
     //로컬스토리지에 사용지 ID가 없을경우
-    loginForm.classList.remove(HiddenClassName);
+    loginScreen.classList.remove(HiddenClassName);
     loginButton.addEventListener("click", loginButtonClick);
     function loginButtonClick(event) {
         const UserId = loginInput.value;
         localStorage.setItem("UserId", UserId);
         welcome.innerText = `Welcome ${UserId}`;
-        loginForm.classList.add(HiddenClassName);
-        welcome.classList.remove(HiddenClassName);
+        loginScreen.classList.add(HiddenClassName);
+        show_off.classList.remove(HiddenClassName);
     }
 } else {
     //로컬스토리지에 사용자 ID가 있음 -> welcome화면 
-    welcome.innerText = `Welcome ${SavedUserID}`;
+    welcome.innerText = `Welcome ${SavedUserId}`;
     show_off.classList.remove(HiddenClassName);
 }
