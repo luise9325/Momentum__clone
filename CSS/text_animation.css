@@ -1,0 +1,66 @@
+.welcome2 {
+    margin-bottom: 30px;
+    background-image: linear-gradient(45deg, black, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-size: 120px;
+    font-weight: 900;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.text_animation {
+    height: 200px;
+    overflow: hidden;
+    width: auto;
+}
+.text_animation div {
+    animation: 16s wordChange;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+    animation-fill-mode: backwards;
+}
+
+.text_animation h1 {
+    position: relative;
+    text-align: right;
+}
+.text_animation h1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    border-right: 2px solid black;
+    background-color: white;
+    animation: 8s writing;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    animation-fill-mode: backwards;
+}
+
+@keyframes writing {
+    0%{
+        right: 0;
+    }
+    50%{
+        right: 100%;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+@keyframes wordChange {
+    0%{
+        margin-top: 0;
+    }
+    50%{
+        margin-top: -180px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}

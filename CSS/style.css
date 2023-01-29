@@ -1,5 +1,26 @@
 @import "reset.css";
+@import "splash.css";
+@import "welcome.css";
+@import "text_animation.css";
+@import "bike.css";
+@import "nonlog.css";
+
+html{
+    background-color: white;
+}
 
 .hidden {
     display: none;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.flex2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
