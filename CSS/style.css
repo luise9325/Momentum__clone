@@ -7,6 +7,7 @@
 
 html{
     background-color: white;
+    overflow: hidden;
 }
 
 .hidden {
