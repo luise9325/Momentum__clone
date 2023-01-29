@@ -28,6 +28,9 @@ function paintTodo(newTodo) {
 function todoErase(event) {
     const li = event.target.parentElement;
     li.remove();
+    Todos = Todos.filter((todo) => todo.id !== parseInt(li.id));
+    //새 funciton을 만들지 않고 함 
+    saveTodos();
 }
 
 function todoSubmit(event) {
