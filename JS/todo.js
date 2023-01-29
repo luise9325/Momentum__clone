@@ -2,6 +2,12 @@ const todoForm = document.querySelector(".todo_form");
 const todoInput = todoForm.querySelector("input")
 const todoList = document.querySelector(".todo_list");
 
+const todos = [];
+
+function saveTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
 todoForm.addEventListener("submit", todoSubmit);
 
 function paintTodo(newTodo) {
@@ -25,5 +31,6 @@ function todoSubmit(event) {
     event.preventDefault();
     const newTodo = todoInput.value;
     todoInput.value = "";
+    todos.push(newTodo);
     paintTodo(newTodo);
 }
